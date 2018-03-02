@@ -1,4 +1,7 @@
 {
-  "SERVER_URL": "https://PRODSERVER/api",
-  "SOME_OTHER_URL": "https://echo.getpostman.com"
+  "serverURL": "https://pg-app-y573h5yls9f9xj5resrxyqdxl3c2fi.scalabl.cloud/1/7",
+  "appId" : "06Vnb1MB4Hf2UT2Px8oowwEde96qfPeScXPYRMGR",
+  "JSKey" : "Z4BaU4AU37Fari86Kra1osNa9czGhmRhAe6fXPqS"
+
 }
+
