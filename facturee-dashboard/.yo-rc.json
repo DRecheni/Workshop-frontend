@@ -1,0 +1,15 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "FactureeDashboard",
+      "appId": "com.factury.app",
+      "ionicCss": false,
+      "bowerPackages": [],
+      "platforms": [],
+      "plugins": [],
+      "appModule": "FactureeDashboard",
+      "ecosystems": [],
+      "install": "npm"
+    }
+  }
+}
