@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "angular": "~1.5.0",
+    "angular": "~1.6.1",
     "angular-ui-router": "~0.4.2",
     "ngCordova": "~0.1.27-alpha",
     "parse": "^1.11.0",

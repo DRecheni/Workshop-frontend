@@ -36,11 +36,17 @@ angular.module('main', [
       {
 
         abstract: true,
-        templateUrl: "main/templates/"
+        templateUrl: "main/templates/simple.html"
 
       }
-    );
+    )
+    .state('appSimple.login',
+      {
+        url : "/login",
+        template: "<login></login>"
+      }
 
+    )
 
 
 
