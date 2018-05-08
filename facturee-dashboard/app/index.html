@@ -13,46 +13,78 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+    <link rel="stylesheet" href="bower_components/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css main/styles/app.css -->
     <!-- inject:css -->
+
+    <link rel="stylesheet" href="dashboard-core/styles/dashboard-core.css">
+
     <link rel="stylesheet" href="main/styles/main.css">
+
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body ng-app="FactureeDashboard">
+  <body class="header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden" ng-app="FactureeDashboard">
 
     <!-- the nav bar will be updated as we navigate between views -->
     <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-calm">
-      <ion-nav-back-button></ion-nav-back-button>
-    </ion-nav-bar>
-    <!-- the current view will be rendered in the <ion-nav-view> directive -->
-    <ion-nav-view></ion-nav-view>
 
-    <!-- will be a 404 during development -->
-    <script src="cordova.js"></script>
+    <ui-view class="app"></ui-view>
+
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/ionic/release/js/ionic.js"></script>
-    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
     <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
     <script src="bower_components/parse/parse.js"></script>
     <script src="bower_components/angular-parse-bower/angular-parse.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
+    <script src="bower_components/Chart.js/dist/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/angular-daterangepicker/js/angular-daterangepicker.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="bower_components/popper.js/dist/umd/popper.js"></script>
+    <script src="bower_components/toastr/toastr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/app.js -->
     <!-- inject:js -->
     <script src="main/main.js"></script>
+    <script src="main/services/project-serv.js"></script>
     <script src="main/constants/config-const.js"></script>
+    <script src="main/components/project-list/project-list-component.js"></script>
+    <script src="main/components/nav-bar/nav-bar-component.js"></script>
+    <script src="dashboard-core/dashboard-core.js"></script>
+    <script src="dashboard-core/directives/core-directives-dir.js"></script>
+    <script src="dashboard-core/constants/dashboard-core-config-const.js"></script>
     <script src="app.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
