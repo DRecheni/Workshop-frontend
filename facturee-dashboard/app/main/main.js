@@ -1,10 +1,10 @@
 'use strict';
 
 
-
 angular.module('main', [
   'ui.router',
   'ngParse',
+  'toastr',
   'ui.bootstrap'
   // TODO: load other modules selected during generation
 ])
@@ -27,7 +27,7 @@ angular.module('main', [
     .state('app.main',
       {
         url: '/',
-        template: '<h1>Collio </h1>',
+        template: '<main-view></main-view>',
         // templateUrl: 'main/templates/<someTemplate>.html',
         // controller: 'SomeCtrl as ctrl'
       }
