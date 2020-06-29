@@ -4,6 +4,7 @@
 angular.module('main', [
   'ui.router',
   'ngParse',
+  'ngLodash',
   'toastr',
   'ui.bootstrap'
   // TODO: load other modules selected during generation

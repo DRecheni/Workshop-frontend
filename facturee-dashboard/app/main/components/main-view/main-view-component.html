@@ -1,5 +1,9 @@
 <div class="d-flex justify-content-center">
     <h1>The fox hall of fame</h1>
     <img ng-src="{{ctrl.imgUrl}}" id="foxImage" ng-if="ctrl.imgUrl"/>
+    <h3>Tips: </h3>
+    <h4 ng-repeat='tip in ctrl.tips' ng-if='ctrl.displayTips'>{{tip.text}} </h4>
+    <input type="text" ng-model='ctrl.newTip' placeholder="New tip" />
+    <button ng-click='ctrl.saveTip(ctrl.newTip)'>Add tip</button>
 </div>
 

@@ -11,12 +11,13 @@ angular.module('main')
     controller: function (
       $scope,
       $state,
-      $http
-      
+      $http,
+      $timeout,
+      Tip
     ) {
       let ctrl = this
-
-      // Tips.getFive(ctrl, 'tips')
+      ctrl.displayTips = false
+      Tip.getFive(ctrl, 'tips').then(() => $timeout(()=> ctrl.displayTips = true, 1))
 
       new Parse.Cloud.run('fa_home_image')
         .then(res => {
@@ -26,8 +27,13 @@ angular.module('main')
         .catch(e => console.log(e))
 
       ctrl.saveTip = (tip) => {
+        if (!tip) toastr.error(`Type a tip first!`)
         Parse.Object.saveAll(new Tip({ text: tip }))
-          .then(() => toastr.success(`Tip saved!`))
+          .then(() => {
+            toastr.success(`Tip saved!`)
+            ctrl.displayTips = false
+            $timeout(()=> ctrl.displayTips = true, 1)
+          })
           .catch(e => console.log(`Error: ${e}`))
       }
 
